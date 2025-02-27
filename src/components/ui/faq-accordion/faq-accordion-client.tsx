@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import * as Accordion from "@radix-ui/react-accordion";
 import { Minus, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { FaqAccordionProps } from "./types";
+import type { FaqAccordionProps } from "./types";
 
 export function FaqAccordionClient({
   data,
