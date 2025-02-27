@@ -4,33 +4,39 @@ import type { FAQItem } from "@/components/ui/faq-accordion/types";
 
 const defaultData: FAQItem[] = [
   {
-    answer: "The internet doesn't close. It's available 24/7.",
-    icon: "❤️",
-    iconPosition: "right",
     id: 1,
-    question: "How late does the internet close?",
+    question: "Are you lost, baby girl? 😏",
+    answer: "No worries, I'll guide you through this magical world.",
+    icon: "💫",
+    iconPosition: "right",
   },
   {
-    answer: "No, you don't need a license to browse this website.",
     id: 2,
-    question: "Do I need a license to browse this website?",
-  },
-  {
-    answer: "Our cookies are digital, not edible. They're used for website functionality.",
-    id: 3,
-    question: "What flavour are the cookies?",
-  },
-  {
-    answer: "Yes, but we do have a return policy",
-    icon: "⭐",
+    question: "Do I need a license to flirt with you? 🥰",
+    answer: "Nope, but a sweet message might help! 💕",
+    icon: "💌",
     iconPosition: "left",
-    id: 4,
-    question: "Can I get lost here?",
   },
   {
-    answer: "Don't worry, you can always go back or refresh the page.",
+    id: 3,
+    question: "What’s your secret ingredient? 😍",
+    answer: "A little bit of charm, a pinch of sass, and a whole lot of love. 💖",
+    icon: "🍯",
+    iconPosition: "right",
+  },
+  {
+    id: 4,
+    question: "Can I get lost in your eyes? 👀",
+    answer: "Only if you promise not to find your way out. 😜",
+    icon: "✨",
+    iconPosition: "left",
+  },
+  {
     id: 5,
-    question: "What if I click the wrong button?",
+    question: "What if I press the wrong button? 😳",
+    answer: "Oops! Looks like you just opened my heart. 💘",
+    icon: "🎯",
+    iconPosition: "right",
   },
 ];
 
