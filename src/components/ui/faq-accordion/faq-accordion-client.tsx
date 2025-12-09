@@ -1,4 +1,3 @@
-// components/ui/faq-accordion/faq-accordion-client.tsx
 "use client";
 
 import * as React from "react";
@@ -20,7 +19,7 @@ export function FaqAccordionClient({
   return (
     <div className={cn("p-4", className)}>
       {timestamp && (
-        <div className="mb-4 text-sm text-muted-foreground">{timestamp}</div>
+        <div className="mb-4 text-sm text-gray-400">{timestamp}</div>
       )}
 
       <Accordion.Root
@@ -41,8 +40,8 @@ export function FaqAccordionClient({
                   className={cn(
                     "relative flex items-center space-x-2 rounded-xl p-2 transition-colors",
                     openItem === item.id.toString() 
-                      ? "bg-primary/20 text-primary" 
-                      : "bg-muted hover:bg-primary/10",
+                      ? "bg-gray-100 text-black" 
+                      : "bg-gray-50 hover:bg-gray-100",
                     questionClassName
                   )}
                 >
@@ -61,13 +60,13 @@ export function FaqAccordionClient({
                       {item.icon}
                     </span>
                   )}
-                  <span className="font-medium">{item.question}</span>
+                  <span className="font-medium text-black">{item.question}</span>
                 </div>
 
                 <span 
                   className={cn(
-                    "text-muted-foreground",
-                    openItem === item.id.toString() && "text-primary"
+                    "text-gray-400",
+                    openItem === item.id.toString() && "text-black"
                   )}
                 >
                   {openItem === item.id.toString() ? (
@@ -92,7 +91,7 @@ export function FaqAccordionClient({
                 <div className="ml-7 mt-1 md:ml-16">
                   <div
                     className={cn(
-                      "relative max-w-xs rounded-2xl bg-primary px-4 py-2 text-primary-foreground",
+                      "relative max-w-xs rounded-2xl bg-gray-100 px-4 py-2 text-gray-700",
                       answerClassName
                     )}
                   >

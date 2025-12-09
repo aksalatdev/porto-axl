@@ -4,17 +4,24 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const quotes = [
+  // Life quotes
   "I've been through a lot, but I'm okay now. I'm home.",
+  'The wound is the place where the light enters you.',
+  'Not all who wander are lost.',
+  'In the middle of difficulty lies opportunity.',
+  'The only way out is through.',
+  'Stars cannot shine without darkness.',
+  'What feels like the end is often the beginning.',
+  'You are not your mistakes. You are not your struggles.',
+  'Healing is not linear, and that is okay.',
+  'Sometimes the bravest thing is to keep going.',
+  'Your story is not over yet.',
+  'Growth is painful. Change is painful. But nothing is as painful as staying stuck.',
+  'The sun will rise and we will try again.',
+  // Code quotes
   'The code you write today is the legacy you leave tomorrow.',
   'Every bug is just a feature waiting to be understood.',
-  'In the world of zeros and ones, creativity is infinite.',
-  'Coffee: turning sleep deprivation into productivity since forever.',
-  'The best error message is the one that never shows up.',
-  'Code is poetry written for machines to dance to.',
-  'Debugging: being the detective in a crime movie where you are also the murderer.',
   'First, solve the problem. Then, write the code.',
-  'It works on my machine.',
-  'The only way to learn a new programming language is by writing programs in it.',
   'Simplicity is the soul of efficiency.',
   'Talk is cheap. Show me the code.',
 ];
