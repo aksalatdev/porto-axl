@@ -21,7 +21,7 @@ export function Typewriter({
   sound = true
 }: TypewriterProps) {
   const [displayedText, setDisplayedText] = useState('');
-  const [isComplete, setIsComplete] = useState(false);
+
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
@@ -63,7 +63,6 @@ export function Typewriter({
         index++;
       } else {
         clearInterval(interval);
-        setIsComplete(true);
         onComplete?.();
       }
     }, speed);

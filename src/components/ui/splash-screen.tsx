@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Typewriter } from './typewriter';
+
 
 interface SplashScreenProps {
   children: React.ReactNode;
