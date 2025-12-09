@@ -39,9 +39,9 @@ export function BackgroundMusic() {
 
     addEventListeners();
 
+    const audio = audioRef.current;
     return () => {
       removeEventListeners();
-      const audio = audioRef.current;
       if (audio) {
         audio.pause();
       }
