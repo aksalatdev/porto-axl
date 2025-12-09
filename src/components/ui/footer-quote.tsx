@@ -48,7 +48,7 @@ export function FooterQuote() {
           transition={{ duration: 0.5 }}
           className="text-center text-sm text-gray-500 italic font-mono max-w-md mx-auto"
         >
-          "&ldquo;{quotes[currentQuote]}&rdquo;"
+          "          {`"${quotes[currentQuote]}"`}"
         </motion.p>
       </AnimatePresence>
     </div>
