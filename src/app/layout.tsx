@@ -22,6 +22,7 @@ import { ThemeProvider } from "next-themes";
 import { ThemeToggle } from "@/components/theme-toggle";
 import "./globals.css";
 import { BackgroundMusic } from "@/components/ui/background-music";
+import { SplashScreen } from "@/components/ui/splash-screen";
 
 export default function RootLayout({
   children,
@@ -41,9 +42,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ThemeToggle />
-          <BackgroundMusic />
-          {children}
+          <SplashScreen>
+            <ThemeToggle />
+            <BackgroundMusic />
+            {children}
+          </SplashScreen>
         </ThemeProvider>
       </body>
     </html>
