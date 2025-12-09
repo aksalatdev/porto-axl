@@ -34,7 +34,7 @@ const initialTasks: Task[] = [
     title: "Chapter 02 — The Awakening",
     status: "completed",
     subtasks: [
-      { id: "2.1", title: "First heartbreak", description: "Pain is the greatest teacher", status: "completed" },
+      { id: "2.1", title: "Face the first real struggle", description: "When life hit hard for the first time", status: "completed" },
       { id: "2.2", title: "Discover your calling", description: "When code first felt like magic", status: "completed" },
       { id: "2.3", title: "Accept being misunderstood", description: "Not everyone will get it", status: "completed" },
     ],
