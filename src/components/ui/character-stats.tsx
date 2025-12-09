@@ -32,11 +32,11 @@ export function CharacterStats() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.3 }}
-      className="w-full border border-gray-200 p-4"
+      className="w-full border border-gray-200 p-3 sm:p-4"
     >
-      <h3 className="text-xs font-mono tracking-widest uppercase text-gray-400 mb-4">— STATUS —</h3>
+      <h3 className="text-[10px] sm:text-xs font-mono tracking-widest uppercase text-gray-400 mb-3 sm:mb-4">— STATUS —</h3>
       
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
         {stats.map((stat, index) => (
           <motion.div
             key={stat.label}
@@ -45,11 +45,11 @@ export function CharacterStats() {
             transition={{ duration: 0.3, delay: index * 0.1 }}
             className="flex flex-col"
           >
-            <span className="text-[10px] font-mono text-gray-400 uppercase tracking-wider">
+            <span className="text-[8px] sm:text-[10px] font-mono text-gray-400 uppercase tracking-wider">
               {stat.label}
             </span>
             <div className="flex items-baseline gap-1">
-              <span className="text-lg font-mono font-bold text-black">
+              <span className="text-base sm:text-lg font-mono font-bold text-black">
                 {stat.value}
               </span>
               {stat.maxValue && (

@@ -113,19 +113,19 @@ export default function Plan() {
                   whileHover={{ x: 4 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="mr-3">
+                  <div className="mr-2 sm:mr-3 flex-shrink-0">
                     {isCompleted ? (
-                      <CheckCircle2 className="h-4 w-4 text-black" />
+                      <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-black" />
                     ) : task.status === "in-progress" ? (
-                      <CircleDotDashed className="h-4 w-4 text-gray-400" />
+                      <CircleDotDashed className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-gray-400" />
                     ) : (
-                      <Circle className="h-4 w-4 text-gray-300" />
+                      <Circle className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-gray-300" />
                     )}
                   </div>
-                  <span className={`font-mono text-sm tracking-wide ${isCompleted ? "line-through text-gray-400" : ""}`}>
+                  <span className={`font-mono text-xs sm:text-sm tracking-wide flex-1 ${isCompleted ? "line-through text-gray-400" : ""}`}>
                     {task.title}
                   </span>
-                  <span className="ml-auto text-xs font-mono text-gray-400 uppercase">
+                  <span className="ml-2 text-[10px] sm:text-xs font-mono text-gray-400 uppercase whitespace-nowrap">
                     {task.status}
                   </span>
                 </motion.div>
@@ -137,12 +137,12 @@ export default function Plan() {
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="ml-7 overflow-hidden"
+                      className="ml-5 sm:ml-7 overflow-hidden"
                     >
                       {task.subtasks.map((subtask) => (
                         <motion.li
                           key={subtask.id}
-                          className="flex items-start py-1.5 border-l border-gray-200 pl-4 group cursor-pointer"
+                          className="flex items-start py-1.5 border-l border-gray-200 pl-3 sm:pl-4 group cursor-pointer"
                           onClick={(e) => { e.stopPropagation(); toggleSubtaskStatus(task.id, subtask.id); }}
                           whileHover={{ x: 2 }}
                         >
@@ -156,10 +156,10 @@ export default function Plan() {
                             )}
                           </div>
                           <div>
-                            <p className={`text-xs ${subtask.status === "completed" ? "line-through text-gray-400" : "text-gray-700"}`}>
+                            <p className={`text-[11px] sm:text-xs ${subtask.status === "completed" ? "line-through text-gray-400" : "text-gray-700"}`}>
                               {subtask.title}
                             </p>
-                            <p className="text-[10px] text-gray-400 italic">{subtask.description}</p>
+                            <p className="text-[9px] sm:text-[10px] text-gray-400 italic">{subtask.description}</p>
                           </div>
                         </motion.li>
                       ))}

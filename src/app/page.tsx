@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <main className="relative min-h-screen bg-white text-black">
       {/* Under Development Badge */}
-      <div className="fixed top-4 right-4 z-50">
-        <div className="flex items-center gap-2 px-3 py-1.5 border border-gray-200 bg-white/80 backdrop-blur-sm">
-          <span className="relative flex h-2 w-2">
+      <div className="fixed top-2 right-2 sm:top-4 sm:right-4 z-50">
+        <div className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 border border-gray-200 bg-white/80 backdrop-blur-sm">
+          <span className="relative flex h-1.5 w-1.5 sm:h-2 sm:w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gray-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-gray-500"></span>
+            <span className="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-gray-500"></span>
           </span>
-          <span className="text-[10px] font-mono tracking-widest uppercase text-gray-500">Under Development</span>
+          <span className="text-[8px] sm:text-[10px] font-mono tracking-widest uppercase text-gray-500">Under Development</span>
         </div>
       </div>
 
@@ -32,7 +32,7 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center px-8 py-24">
+      <div className="relative z-10 flex flex-col items-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-24">
         {/* Hero Section with Typewriter */}
         <HeroSection />
 

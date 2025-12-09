@@ -46,9 +46,9 @@ export function FooterQuote() {
   if (!mounted) return null;
 
   return (
-    <div className="w-full py-8 border-t border-gray-200">
+    <div className="w-full py-6 sm:py-8 border-t border-gray-200 px-2">
       <div className="flex items-center justify-center gap-2 mb-2">
-        <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest">TIP</span>
+        <span className="text-[8px] sm:text-[10px] font-mono text-gray-400 uppercase tracking-widest">TIP</span>
       </div>
       <AnimatePresence mode="wait">
         <motion.p
@@ -57,7 +57,7 @@ export function FooterQuote() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.5 }}
-          className="text-center text-sm text-gray-500 italic font-mono max-w-md mx-auto"
+          className="text-center text-xs sm:text-sm text-gray-500 italic font-mono max-w-md mx-auto px-2"
         >
           <QuoteText quote={quotes[currentQuote]} />
         </motion.p>

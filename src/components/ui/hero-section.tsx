@@ -30,14 +30,14 @@ export function HeroSection() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="w-full max-w-2xl mb-16 text-center"
+      className="w-full max-w-2xl mb-8 sm:mb-12 md:mb-16 text-center px-2"
     >
       {/* Title */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-6xl md:text-8xl font-bold tracking-tighter mb-2"
+        className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tighter mb-2"
       >
         BITADEV
       </motion.h1>
@@ -46,7 +46,7 @@ export function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="text-[10px] font-mono tracking-[0.3em] uppercase text-gray-400 mb-12"
+        className="text-[8px] sm:text-[10px] font-mono tracking-[0.2em] sm:tracking-[0.3em] uppercase text-gray-400 mb-6 sm:mb-8 md:mb-12"
       >
         Developer / Creator / Dreamer
       </motion.p>
@@ -56,16 +56,16 @@ export function HeroSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.8 }}
-        className="border border-gray-200 p-6 text-left"
+        className="border border-gray-200 p-4 sm:p-6 text-left"
       >
-        <div className="min-h-[80px]">
+        <div className="min-h-[60px] sm:min-h-[80px]">
           {!showAll ? (
             <Typewriter
               key={currentDialogue}
               text={dialogues[currentDialogue]}
               speed={40}
               onComplete={handleComplete}
-              className="font-mono text-sm text-gray-700"
+              className="font-mono text-xs sm:text-sm text-gray-700"
               sound={true}
             />
           ) : (
@@ -75,7 +75,7 @@ export function HeroSection() {
               className="space-y-2"
             >
               {dialogues.map((dialogue, index) => (
-                <p key={index} className="font-mono text-sm text-gray-700">
+                <p key={index} className="font-mono text-xs sm:text-sm text-gray-700">
                   {index === dialogues.length - 1 ? (
                     <span className="text-black font-medium">{dialogue}</span>
                   ) : (
