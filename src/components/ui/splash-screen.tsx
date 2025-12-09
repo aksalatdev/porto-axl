@@ -36,11 +36,10 @@ export function SplashScreen({ children }: SplashScreenProps) {
               transition={{ duration: 0.5 }}
             >
               <TextShimmer 
-                as="h1"
-                className="text-4xl font-bold [--base-color:theme(colors.pink.400)] [--base-gradient-color:theme(colors.pink.600)] dark:[--base-color:theme(colors.pink.300)] dark:[--base-gradient-color:theme(colors.pink.100)]" 
-                duration={1.2}
+                className="font-mono text-sm" 
+                duration={1}
               >
-                Loading...
+                Generating code...
               </TextShimmer>
             </motion.div>
           </motion.div>
