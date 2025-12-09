@@ -1,42 +1,41 @@
-// components/demos/faq-accordion-demo.tsx
 import { FaqAccordion } from "@/components/ui/faq-accordion";
 import type { FAQItem } from "@/components/ui/faq-accordion/types";
 
 const defaultData: FAQItem[] = [
   {
     id: 1,
-    question: "Are you lost, baby girl? 😏",
-    answer: "No worries, I'll guide you through this magical world.",
-    icon: "💫",
-    iconPosition: "right",
+    question: "Who are you?",
+    answer: "A wanderer in the realm of code. Building dreams, one line at a time.",
+    icon: "►",
+    iconPosition: "left",
   },
   {
     id: 2,
-    question: "Do I need a license to flirt with you? 🥰",
-    answer: "Nope, but a sweet message might help! 💕",
-    icon: "💌",
+    question: "What drives you?",
+    answer: "The thrill of creation. The joy of solving puzzles that others deem impossible.",
+    icon: "►",
     iconPosition: "left",
   },
   {
     id: 3,
-    question: "What’s your secret ingredient? 😍",
-    answer: "A little bit of charm, a pinch of sass, and a whole lot of love. 💖",
-    icon: "🍯",
-    iconPosition: "right",
+    question: "What are you seeking?",
+    answer: "Meaning. Purpose. And maybe a good cup of coffee along the way.",
+    icon: "►",
+    iconPosition: "left",
   },
   {
     id: 4,
-    question: "Can I get lost in your eyes? 👀",
-    answer: "Only if you promise not to find your way out. 😜",
-    icon: "✨",
+    question: "Any regrets?",
+    answer: "Only the chances I didn't take. But every ending is a new beginning.",
+    icon: "►",
     iconPosition: "left",
   },
   {
     id: 5,
-    question: "What if I press the wrong button? 😳",
-    answer: "Oops! Looks like you just opened my heart. 💘",
-    icon: "🎯",
-    iconPosition: "right",
+    question: "What's next?",
+    answer: "The journey continues. New quests await. The story is far from over.",
+    icon: "►",
+    iconPosition: "left",
   },
 ];
 
@@ -54,9 +53,8 @@ export function CustomStyleDemo() {
     <FaqAccordion 
       data={defaultData}
       className="max-w-[700px]"
-      questionClassName="bg-secondary hover:bg-secondary/80"
-      answerClassName="bg-secondary text-secondary-foreground"
-      timestamp="Updated daily at 12:00 PM"
+      questionClassName="bg-white hover:bg-gray-50 border border-gray-200"
+      answerClassName="bg-gray-50 text-gray-700"
     />
   );
 }
