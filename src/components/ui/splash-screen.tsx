@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import { useSplash } from './splash-context';
 
 interface SplashScreenProps {
   children: React.ReactNode;
@@ -18,6 +18,7 @@ const loadingMessages = [
 export function SplashScreen({ children }: SplashScreenProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [messageIndex, setMessageIndex] = useState(0);
+  const { setSplashComplete } = useSplash();
 
   useEffect(() => {
     // Cycle through messages
@@ -25,16 +26,20 @@ export function SplashScreen({ children }: SplashScreenProps) {
       setMessageIndex((prev) => (prev + 1) % loadingMessages.length);
     }, 800);
 
-    // End loading after 3 seconds
+    // End loading after 3.2 seconds
     const timer = setTimeout(() => {
       setIsLoading(false);
+      // Notify context that splash is complete after fade out (0.8s)
+      setTimeout(() => {
+        setSplashComplete();
+      }, 800);
     }, 3200);
 
     return () => {
       clearInterval(messageInterval);
       clearTimeout(timer);
     };
-  }, []);
+  }, [setSplashComplete]);
 
   return (
     <>

@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from './typewriter';
 import { SocialIcons } from './social-icons';
+import { useSplash } from './splash-context';
 
 const dialogues = [
   "Welcome, traveler.",
@@ -15,6 +16,19 @@ const dialogues = [
 export function HeroSection() {
   const [currentDialogue, setCurrentDialogue] = useState(0);
   const [showAll, setShowAll] = useState(false);
+  const [startTypewriter, setStartTypewriter] = useState(false);
+  const { isSplashComplete } = useSplash();
+
+  // Wait for splash to complete before starting typewriter
+  useEffect(() => {
+    if (isSplashComplete) {
+      // Small delay after splash completes
+      const timer = setTimeout(() => {
+        setStartTypewriter(true);
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [isSplashComplete]);
 
   const handleComplete = () => {
     if (currentDialogue < dialogues.length - 1) {
@@ -70,7 +84,9 @@ export function HeroSection() {
         className="border border-gray-200 p-4 sm:p-6 text-left"
       >
         <div className="min-h-[60px] sm:min-h-[80px]">
-          {!showAll ? (
+          {!startTypewriter ? (
+            <span className="font-mono text-xs sm:text-sm text-gray-400">...</span>
+          ) : !showAll ? (
             <Typewriter
               key={currentDialogue}
               text={dialogues[currentDialogue]}
