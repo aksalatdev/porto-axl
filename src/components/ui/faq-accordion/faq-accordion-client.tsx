@@ -35,10 +35,10 @@ export function FaqAccordionClient({
             className="mb-2"
           >
             <Accordion.Header>
-              <Accordion.Trigger className="flex w-full items-center justify-start gap-x-4">
+              <Accordion.Trigger className="flex w-full items-center justify-between gap-x-4">
                 <div
                   className={cn(
-                    "relative flex items-center space-x-2 rounded-xl p-2 transition-colors",
+                    "relative flex-1 flex items-center space-x-2 rounded-xl p-3 transition-colors",
                     openItem === item.id.toString() 
                       ? "bg-gray-100 text-black" 
                       : "bg-gray-50 hover:bg-gray-100",
@@ -65,7 +65,7 @@ export function FaqAccordionClient({
 
                 <span 
                   className={cn(
-                    "text-gray-400",
+                    "text-gray-400 flex-shrink-0",
                     openItem === item.id.toString() && "text-black"
                   )}
                 >
@@ -88,10 +88,10 @@ export function FaqAccordionClient({
                 transition={{ duration: 0.4 }}
                 className="overflow-hidden"
               >
-                <div className="ml-7 mt-1 md:ml-16">
+                <div className="mt-2 pl-4">
                   <div
                     className={cn(
-                      "relative max-w-xs rounded-2xl bg-gray-100 px-4 py-2 text-gray-700",
+                      "relative rounded-xl bg-gray-50 px-4 py-3 text-gray-600 text-sm",
                       answerClassName
                     )}
                   >

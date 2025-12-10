@@ -1,9 +1,13 @@
-import { DefaultDemo } from "@/components/demos/faq-accordion-demo";
+"use client";
+
+import { ChatDialogueDemo } from "@/components/demos/chat-dialogue-demo";
 import { AgentPlanDemo } from "@/components/demos/agent-plan-demo";
 import { FlickeringGrid } from "@/components/ui/flickering-grid";
 import { CharacterStats } from "@/components/ui/character-stats";
 import { FooterQuote } from "@/components/ui/footer-quote";
 import { HeroSection } from "@/components/ui/hero-section";
+import { PageTransition } from "@/components/ui/page-transition";
+
 
 export default function Home() {
   return (
@@ -32,36 +36,38 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-24">
-        {/* Hero Section with Typewriter */}
-        <HeroSection />
+      <PageTransition>
+        <div className="relative z-10 flex flex-col items-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-24">
+          {/* Hero Section with Typewriter */}
+          <HeroSection />
 
-        {/* Character Stats */}
-        <div className="w-full max-w-2xl mb-16">
-          <CharacterStats />
-        </div>
+          {/* Character Stats */}
+          <div className="w-full max-w-2xl mb-8 sm:mb-12 md:mb-16">
+            <CharacterStats />
+          </div>
 
-        {/* Dialog Section */}
-        <div className="w-full max-w-2xl mb-16">
-          <h2 className="text-xs font-mono tracking-widest uppercase text-gray-400 mb-4">
-            — DIALOGUE —
-          </h2>
-          <DefaultDemo />
-        </div>
+          {/* Dialog Section */}
+          <div className="w-full max-w-2xl mb-16">
+            <h2 className="text-xs font-mono tracking-widest uppercase text-gray-400 mb-4">
+              — DIALOGUE —
+            </h2>
+            <ChatDialogueDemo />
+          </div>
 
-        {/* Quest Log */}
-        <div className="w-full max-w-2xl mb-16">
-          <h2 className="text-xs font-mono tracking-widest uppercase text-gray-400 mb-4">
-            — QUEST LOG —
-          </h2>
-          <AgentPlanDemo />
-        </div>
+          {/* Quest Log */}
+          <div className="w-full max-w-2xl mb-16">
+            <h2 className="text-xs font-mono tracking-widest uppercase text-gray-400 mb-4">
+              — QUEST LOG —
+            </h2>
+            <AgentPlanDemo />
+          </div>
 
-        {/* Footer Quote */}
-        <div className="w-full max-w-2xl">
-          <FooterQuote />
+          {/* Footer Quote */}
+          <div className="w-full max-w-2xl">
+            <FooterQuote />
+          </div>
         </div>
-      </div>
+      </PageTransition>
     </main>
   );
 }

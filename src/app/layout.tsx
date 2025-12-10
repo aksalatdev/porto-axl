@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { BackgroundMusic } from "@/components/ui/background-music";
 import { SplashScreen } from "@/components/ui/splash-screen";
+import { SideNav } from "@/components/ui/side-nav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
     >
       <body className="bg-white text-black">
         <SplashScreen>
+          <SideNav />
           <BackgroundMusic />
           {children}
         </SplashScreen>
