@@ -7,8 +7,6 @@ import { TypingIndicator } from "./typing-indicator";
 import { ReplayButton } from "./replay-button";
 import type { ChatDialogueProps } from "./types";
 
-type AnimationPhase = "idle" | "showing_question" | "showing_typing" | "showing_answer";
-
 export function ChatDialogue({
   messages,
   className,
