@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from './typewriter';
+import { SocialIcons } from './social-icons';
 
 const dialogues = [
   "Welcome, traveler.",
@@ -46,10 +47,20 @@ export function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="text-[8px] sm:text-[10px] font-mono tracking-[0.2em] sm:tracking-[0.3em] uppercase text-gray-400 mb-6 sm:mb-8 md:mb-12"
+        className="text-[8px] sm:text-[10px] font-mono tracking-[0.2em] sm:tracking-[0.3em] uppercase text-gray-400 mb-4 sm:mb-6"
       >
         Developer / Creator / Dreamer
       </motion.p>
+
+      {/* Social Icons */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+        className="flex justify-center mb-6 sm:mb-8 md:mb-12"
+      >
+        <SocialIcons />
+      </motion.div>
 
       {/* Dialogue Box */}
       <motion.div
